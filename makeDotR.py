@@ -72,7 +72,7 @@ def makeDotR(filename):
                 thisDatapoint = dataDict[day][interval]
 
                 # .r = month + day + temp + pressure + windspeed + wind direction + rel humidit
-                # right justify: ----0----0--000.0--000.0--000.0--000.0 ('-' are whitespace)
+                # line formatting: ----0----0--000.0--000.0--000.0--000.0 ('-' are whitespace)
                 formattedLine = str(month).rjust(5, ' ') + day.rjust(5, ' ') + thisDatapoint[0].rjust(7, ' ') + thisDatapoint[1].rjust(7, ' ') + thisDatapoint[4].rjust(7, ' ') + thisDatapoint[5].rjust(7, ' ') + thisDatapoint[10].rjust(7, ' ')
 
                 f.write(formattedLine + '\n')
